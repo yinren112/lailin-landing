@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* 核心自定义 CSS */
+:root {
+  --color-lime: #a3e635;
+  --color-pink: #ff00ff;
+  --color-cyan: #00ffff;
+  --color-black: #050505;
+  --color-white: #ffffff;
+  --shadow-offset: 5px;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  cursor: none; /* 隐藏默认光标 */
+}
+
+/* 噪点纹理背景 */
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #000; border-left: 2px solid #a3e635; }
+::-webkit-scrollbar-thumb { background: #a3e635; border: 2px solid #000; }
+::-webkit-scrollbar-thumb:hover { background: #fff; }
+
+/* 实用类 */
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+.neo-shadow { box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px rgba(0,0,0,1); }
+.neo-shadow-hover:hover { box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); transform: translate(-3px, -3px); }
+.neo-shadow-sm { box-shadow: 3px 3px 0px 0px rgba(0,0,0,1); }
+
+.text-stroke-1 { -webkit-text-stroke: 1px black; }
+.text-stroke-white { -webkit-text-stroke: 1px white; }
+
+/* 动画 */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee { animation: marquee 15s linear infinite; }
+.animate-marquee-reverse { animation: marquee 15s linear infinite reverse; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* Glitch 效果 */
+.glitch-wrapper { position: relative; display: inline-block; }
+.glitch-wrapper::before, .glitch-wrapper::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glitch-wrapper::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00ff;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch-wrapper::after {
+  left: -2px;
+  text-shadow: -1px 0 #00ffff;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+  0% { clip: rect(14px, 9999px, 123px, 0); }
+  5% { clip: rect(97px, 9999px, 14px, 0); }
+  10% { clip: rect(54px, 9999px, 80px, 0); }
+  100% { clip: rect(12px, 9999px, 95px, 0); }
+}
+@keyframes glitch-anim-2 {
+  0% { clip: rect(68px, 9999px, 11px, 0); }
+  5% { clip: rect(25px, 9999px, 96px, 0); }
+  10% { clip: rect(83px, 9999px, 42px, 0); }
+  100% { clip: rect(10px, 9999px, 120px, 0); }
+}
+
+/* 隐藏移动端自定义光标 */
+@media (hover: none) {
+  .custom-cursor { display: none !important; }
+  body { cursor: auto; }
+}
