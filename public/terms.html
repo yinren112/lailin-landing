@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>用户协议 (Terms) | 来霖科技</title>
+  <meta name="description" content="来霖科技用户协议">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-lime: #a3e635;
+      --color-pink: #ff00ff;
+      --color-cyan: #00ffff;
+      --color-black: #050505;
+      --color-white: #ffffff;
+      --shadow-offset: 5px;
+    }
+
+    body {
+      background-color: var(--color-white);
+      color: var(--color-black);
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Noise Background */
+    .noise-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Neo-Brutalist Utils */
+    .neo-border { border: 2px solid var(--color-black); }
+    .neo-shadow { box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px rgba(0,0,0,1); }
+    .neo-shadow-hover:hover { box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); transform: translate(-3px, -3px); }
+    .neo-button {
+      background-color: var(--color-lime);
+      color: var(--color-black);
+      border: 2px solid var(--color-black);
+      box-shadow: 4px 4px 0px 0px #000;
+      transition: all 0.2s;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.75rem 1.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .neo-button:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px 0px #000;
+    }
+    .neo-button:active {
+      transform: translate(0px, 0px);
+      box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    .section-number {
+      background-color: var(--color-black);
+      color: var(--color-lime);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      border: 2px solid var(--color-black);
+      box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.2);
+    }
+
+    .highlight-box {
+      background-color: #f3f4f6;
+      border: 2px solid var(--color-black);
+      padding: 1.5rem;
+      position: relative;
+    }
+    .highlight-box::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 0;
+      width: 8px;
+      background-color: var(--color-pink);
+      border-right: 2px solid var(--color-black);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <div class="noise-bg"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white border-b-2 border-black">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="/" class="text-2xl font-black tracking-tighter hover:text-[var(--color-pink)] transition-colors">
+        LAILIN<span class="text-[var(--color-lime)] bg-black px-1 ml-1">TECH</span>
+      </a>
+      <a href="/" class="neo-button text-sm py-2 px-4 bg-white hover:bg-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        Back Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-12 max-w-4xl relative z-10">
+    <div class="bg-white border-2 border-black neo-shadow p-8 md:p-12">
+      <!-- Title Section -->
+      <div class="border-b-2 border-black pb-8 mb-10 text-center">
+        <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase">User Terms</h1>
+        <p class="text-xl font-bold text-gray-600 font-mono">用户协议</p>
+        <div class="mt-6 inline-block bg-[var(--color-cyan)] border-2 border-black px-4 py-1 font-mono text-sm font-bold">
+          VER: MINIMAL / ICP USE ONLY
+        </div>
+      </div>
+
+      <!-- Content Sections -->
+      <div class="space-y-12">
+        
+        <!-- Section 1 -->
+        <div class="flex gap-6">
+          <div class="shrink-0 hidden md:block">
+            <div class="section-number">01</div>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black mb-4 uppercase flex items-center gap-3">
+              <span class="md:hidden section-number inline-flex scale-75 -ml-2">01</span>
+              服务范围 / Scope
+            </h2>
+            <p class="mb-4 leading-relaxed">
+              成都来霖科技有限公司（以下简称"我们"）通过"来霖教材"平台为用户提供二手教材的信息展示与合规交易相关的线上服务。
+            </p>
+            <ul class="list-disc pl-5 space-y-2 font-mono text-sm md:text-base mb-6 bg-gray-50 p-4 border-2 border-black">
+              <li>二手教材信息发布与浏览</li>
+              <li>教材标价与线上交易撮合</li>
+              <li>教材回收与转售服务</li>
+            </ul>
+            <div class="highlight-box">
+              <strong class="font-black block mb-1">⚠️ IMPORTANT:</strong>
+              本平台不含需前置审批的内容，所有服务均在合法合规范围内进行。
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="flex gap-6">
+          <div class="shrink-0 hidden md:block">
+            <div class="section-number">02</div>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black mb-4 uppercase flex items-center gap-3">
+              <span class="md:hidden section-number inline-flex scale-75 -ml-2">02</span>
+              账户与安全 / Security
+            </h2>
+            <p class="mb-4 leading-relaxed">您在使用我们的服务时，需要遵守以下规则：</p>
+            <ul class="list-disc pl-5 space-y-2 font-mono text-sm md:text-base border-l-4 border-black pl-6">
+              <li>按照平台要求完成实名认证（如适用）</li>
+              <li>妥善保管您的账号和密码</li>
+              <li>不得将账号转让或出借给他人使用</li>
+              <li>对账号下的所有行为承担责任</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="flex gap-6">
+          <div class="shrink-0 hidden md:block">
+            <div class="section-number">03</div>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black mb-4 uppercase flex items-center gap-3">
+               <span class="md:hidden section-number inline-flex scale-75 -ml-2">03</span>
+               交易与结算 / Transaction
+            </h2>
+            <p class="mb-4 leading-relaxed">平台将依法合规处理所有交易和结算：</p>
+            <ul class="list-disc pl-5 space-y-2 font-mono text-sm md:text-base bg-[var(--color-lime)] bg-opacity-20 p-4 border-2 border-black border-dashed">
+              <li>确保交易信息真实、准确、完整</li>
+              <li>按照约定价格和方式完成支付</li>
+              <li>提供必要的售后服务和争议解决</li>
+              <li>遵守相关税务和财务法规</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="flex gap-6">
+          <div class="shrink-0 hidden md:block">
+            <div class="section-number">04</div>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black mb-4 uppercase flex items-center gap-3">
+               <span class="md:hidden section-number inline-flex scale-75 -ml-2">04</span>
+               行为规范 / Code of Conduct
+            </h2>
+            <p class="mb-4 leading-relaxed">用户在使用服务时，严格禁止以下行为：</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="border-2 border-black p-3 flex items-start gap-3 bg-red-50">
+                <svg class="w-6 h-6 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>发布违法违规、虚假欺诈信息</span>
+              </div>
+              <div class="border-2 border-black p-3 flex items-start gap-3 bg-red-50">
+                <svg class="w-6 h-6 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>侵犯他人知识产权或合法权益</span>
+              </div>
+              <div class="border-2 border-black p-3 flex items-start gap-3 bg-red-50">
+                <svg class="w-6 h-6 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>恶意操纵价格或进行不正当竞争</span>
+              </div>
+              <div class="border-2 border-black p-3 flex items-start gap-3 bg-red-50">
+                <svg class="w-6 h-6 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>干扰或破坏平台正常运营</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="flex gap-6">
+          <div class="shrink-0 hidden md:block">
+            <div class="section-number">05</div>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black mb-4 uppercase flex items-center gap-3">
+               <span class="md:hidden section-number inline-flex scale-75 -ml-2">05</span>
+               知识产权 / IP Rights
+            </h2>
+            <p class="mb-4 leading-relaxed p-4 border-l-8 border-[var(--color-cyan)] bg-gray-50">
+              平台所有内容（包括但不限于文字、图片、软件、程序等）的知识产权归我司或原权利人所有。未经许可，不得擅自使用、复制或传播。
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="flex gap-6">
+          <div class="shrink-0 hidden md:block">
+            <div class="section-number">06</div>
+          </div>
+          <div>
+            <h2 class="text-2xl font-black mb-4 uppercase flex items-center gap-3">
+               <span class="md:hidden section-number inline-flex scale-75 -ml-2">06</span>
+               法律适用 / Legal
+            </h2>
+            <p class="mb-4 leading-relaxed">
+              本协议的订立、执行、解释及争议解决均适用中华人民共和国法律。如发生争议，双方应友好协商解决；协商不成的，任何一方可向我司所在地人民法院提起诉讼。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Area -->
+      <div class="mt-16 pt-8 border-t-2 border-black text-center">
+         <p class="font-mono text-sm text-gray-500 mb-4">© <script>document.write(new Date().getFullYear())</script> Chengdu Lailin Technology Co., Ltd.</p>
+         <div class="flex justify-center gap-4">
+           <a href="/" class="text-black font-bold hover:bg-[var(--color-lime)] px-2 transition-colors">HOME</a>
+           <span class="text-gray-300">|</span>
+           <a href="/contact.html" class="text-black font-bold hover:bg-[var(--color-cyan)] px-2 transition-colors">CONTACT</a>
+           <span class="text-gray-300">|</span>
+           <a href="/privacy.html" class="text-black font-bold hover:bg-[var(--color-pink)] px-2 transition-colors">PRIVACY</a>
+         </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
